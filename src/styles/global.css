@@ -386,6 +386,7 @@ li + li { margin-top: 8px; }
 .not-found { min-height: 50vh; }
 .site-footer { background: var(--ink); color: var(--ivory); padding: 48px 0 32px; }
 .site-footer p, .site-footer a { color: var(--ivory); }
+.site-footer .footer-social .btn-outline { color: var(--ink); background: var(--gold); border-color: var(--gold); }
 .footer-grid { display: grid; gap: 24px; }
 .footer-rocket { width: 96px; }
 .footer-heading { color: var(--gold); font-family: Fredoka, ui-rounded, system-ui, sans-serif; font-size: 1.25rem; }
@@ -425,13 +426,13 @@ li + li { margin-top: 8px; }
   }
   .hero-grid {
     display: grid;
-    grid-template-columns: 1fr minmax(280px, 520px) 1fr;
-    gap: 24px;
+    grid-template-columns: minmax(280px, 520px) minmax(280px, 1fr);
+    gap: 32px;
     align-items: center;
     width: min(calc(100% - 80px), 1400px);
   }
-  .hero-copy { grid-column: 2; background: rgb(234 221 247 / 78%); }
-  .hero-art { grid-column: 3; justify-self: end; margin-top: 0; }
+  .hero-copy { grid-column: 1; justify-self: start; background: rgb(234 221 247 / 78%); }
+  .hero-art { grid-column: 2; justify-self: end; margin-top: 0; }
   .hero-character { width: min(100%, 480px); margin-bottom: 58px; }
   .hero-podium { width: min(72%, 390px); }
   .card-grid, .facts { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
