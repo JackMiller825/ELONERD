@@ -8,9 +8,9 @@ export const meta = {
     path: "/",
   },
   token: {
-    title: "Token Details & FAQ — Elonerd",
+    title: "Token Details — Elonerd",
     description:
-      "Check Elonerd's intended network, launch information, contract status and practical answers before interacting with a token.",
+      "Check Elonerd's intended network, launch information and contract status before interacting with a token.",
     path: "/token",
   },
   community: {
@@ -45,7 +45,6 @@ export const hero = {
   medalLabel: "Celebrate a tiny victory",
   activated: "Certified tiny victory.",
   caption: "A fictional mascot. A very real love of nerdy wins.",
-  independence: "Inspired by a headline. Not affiliated with Elon Musk or his companies.",
   heroAlt: "Elonerd smiles with a giant rocket medal and a turquoise screwdriver.",
 }
 
@@ -147,8 +146,6 @@ export const tokenPage = {
     { key: "tokenomics", label: "Tokenomics" },
     { key: "contract", label: "Official contract" },
   ] as const,
-  footnote: "“Not confirmed” is not zero, renounced, locked, audited or safe. These claims need evidence before publication.",
-  primaryPending: "Read the FAQ",
   chart: "View Chart",
   chartPending: "Chart link pending",
   identity: {
@@ -156,12 +153,6 @@ export const tokenPage = {
     ticker: "Ticker",
     network: "Intended network",
   },
-}
-
-export const faqCopy = {
-  eyebrow: "GOOD QUESTIONS",
-  heading: "Less guessing. More clarity.",
-  closing: "Explore the Community",
 }
 
 export const hub = {
@@ -200,11 +191,9 @@ export const galleryCopy = {
   download1024: "Download 1024 PNG",
   close: "Close sticker preview",
   pack: "Download 12-Sticker Pack",
-  packHelper: "Twelve unique designs. Each includes 1024 px and 512 px PNGs. Bonus artwork is separate.",
   empty: "No reactions in this filter. Try All.",
   downloadFailure: "Download unavailable. Try opening the image directly.",
   imageFailure: "Artwork unavailable.",
-  caption: "The medal is big. The mood is specific.",
   bonusTag: "Bonus",
   showing: (count: number) => `Showing ${count} reactions.`,
 }
@@ -279,18 +268,12 @@ export const footer = {
   social: "Social",
   story: "Story",
   howToBuy: "How to Buy",
-  faq: "FAQ",
   stickers: "Reaction Stickers",
   maker: "Medal Maker",
   x: "X",
   telegram: "Telegram",
   xPending: "X link pending",
   telegramPending: "Telegram link pending",
-  independence:
-    "Elonerd is an independent meme project. It is not affiliated with or endorsed by Elon Musk, his companies or any government.",
-  risk: "Memecoins can lose all value. No return or audience size is promised.",
-  privacy: "The medal-card maker runs locally. No wallet is needed for the community tools.",
-  copyright: (year: number) => `© ${year} Elonerd. Community meme artwork.`,
 }
 
 export const notFound = {

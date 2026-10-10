@@ -285,7 +285,7 @@ li + li { margin-top: 8px; }
 .card h2 { font-size: clamp(1.375rem, 2vw, 1.75rem); }
 .card img, .reaction-art img { width: 100%; height: auto; }
 .cloud-divider { width: min(100%, 960px); margin: 0 auto; }
-.invite-grid, .split, .hub-grid, .faq-layout, .maker-grid { display: grid; gap: 24px; }
+.invite-grid, .split, .hub-grid, .maker-grid { display: grid; gap: 24px; }
 .invite-art, .helper-art, .hub-art { width: min(100%, 320px); justify-self: center; }
 .filter-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .filter-button {
@@ -314,15 +314,6 @@ li + li { margin-top: 8px; }
 .art-fallback, .form-error { font-weight: 700; }
 .pack-row { margin-top: 24px; }
 .status { min-height: 1.5em; font-weight: 700; }
-.faq-item {
-  border: 2px solid var(--ink);
-  border-radius: 16px;
-  background: var(--ivory);
-  padding: 12px 16px;
-  margin-bottom: 12px;
-}
-.faq-item summary { min-height: 48px; cursor: pointer; font-weight: 700; display: flex; align-items: center; }
-.faq-item p { margin-top: 8px; }
 .maker-block { margin-top: 48px; background: var(--lavender-deep); color: var(--ink); border-radius: 24px; padding: 16px; }
 .maker-block h3, .maker-block p { color: var(--ink); }
 .field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
@@ -350,7 +341,6 @@ li + li { margin-top: 8px; }
 .site-footer { background: var(--ink); color: var(--ivory); padding: 48px 0 32px; }
 .site-footer p, .site-footer a { color: var(--ivory); }
 .footer-grid { display: grid; gap: 24px; }
-.footer-notes p { max-width: 70ch; }
 .footer-rocket { width: 96px; }
 .footer-heading { color: var(--gold); font-family: Fredoka, ui-rounded, system-ui, sans-serif; font-size: 1.25rem; }
 .site-footer li { list-style: none; }
@@ -385,8 +375,7 @@ li + li { margin-top: 8px; }
   .identity-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .invite-grid, .hub-grid { grid-template-columns: 0.9fr 1.1fr; align-items: center; }
   .invite-grid { grid-template-columns: 0.8fr 1.2fr; }
-  .split, .faq-layout, .maker-grid { grid-template-columns: 1.3fr 0.7fr; align-items: start; }
-  .faq-layout { grid-template-columns: 1.4fr 0.6fr; }
+  .split, .maker-grid { grid-template-columns: 1.3fr 0.7fr; align-items: start; }
   .maker-grid { grid-template-columns: 1fr 1fr; }
   .helper-art, .hub-art { width: min(100%, 420px); }
   .footer-grid { grid-template-columns: 1.3fr 0.7fr 0.9fr 1fr auto; align-items: start; }

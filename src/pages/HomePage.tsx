@@ -79,7 +79,6 @@ export function HomePage() {
               </LinkButton>
             </div>
             <p className="caption">{hero.caption}</p>
-            <p className="note">{hero.independence}</p>
           </div>
           <div className="hero-art">
             <ResponsiveImage

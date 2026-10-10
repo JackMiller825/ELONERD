@@ -1,16 +1,12 @@
 import { useState } from "react"
 import { project } from "../config/project.ts"
-import { buildFaq } from "../content/faq.ts"
-import { faqCopy, meta, tokenPage } from "../content/website.ts"
-import { canCopyContract, contractLabel, displayFact, explorerHref, verifiedUrl } from "../lib/gates.ts"
+import { meta, tokenPage } from "../content/website.ts"
+import { canCopyContract, contractLabel, displayFact, explorerHref } from "../lib/gates.ts"
 import { usePageMeta } from "../lib/meta.ts"
-import { Button, ExternalLink, LinkButton } from "../components/Button.tsx"
-import { FAQItem } from "../components/FAQItem.tsx"
+import { Button, ExternalLink } from "../components/Button.tsx"
 import { Icon } from "../components/Icon.tsx"
 import { PendingLink } from "../components/PendingLink.tsx"
 import { ResponsiveImage } from "../components/ResponsiveImage.tsx"
-
-const faq = buildFaq(project)
 
 export function TokenPage() {
   usePageMeta(meta.token.title, meta.token.description, meta.token.path)
@@ -24,8 +20,6 @@ export function TokenPage() {
     explorer: project.links.explorer,
     explorerVerified: project.verifiedLinks.explorer,
   })
-  const swapReady = verifiedUrl(project.links.swap, project.verifiedLinks.swap)
-
   async function copyContract() {
     if (!addressReady) return
     try {
@@ -126,18 +120,7 @@ export function TokenPage() {
               </article>
             ))}
           </div>
-          <p className="note">{tokenPage.footnote}</p>
           <div className="action-row">
-            {swapReady ? (
-              <PendingLink
-                href={project.links.swap}
-                verified={project.verifiedLinks.swap}
-                label={tokenPage.swapEnabled}
-                pendingLabel={tokenPage.swapPending}
-              />
-            ) : (
-              <LinkButton to="/token#faq">{tokenPage.primaryPending}</LinkButton>
-            )}
             <PendingLink
               href={project.links.chart}
               verified={project.verifiedLinks.chart}
@@ -146,28 +129,6 @@ export function TokenPage() {
               variant="outline"
             />
           </div>
-        </div>
-      </section>
-      <section id="faq" className="section section-ivory">
-        <div className="container faq-layout">
-          <div>
-            <p className="eyebrow">{faqCopy.eyebrow}</p>
-            <h2>{faqCopy.heading}</h2>
-            <div className="faq-list">
-              {faq.map((item, index) => (
-                <FAQItem key={item.question} question={item.question} answer={item.answer} open={index === 0} />
-              ))}
-            </div>
-            <LinkButton to="/community">{faqCopy.closing}</LinkButton>
-          </div>
-          <ResponsiveImage
-            className="helper-art"
-            src="assets/elonerd/website/elonerd-faq-helper-transparent.png"
-            webp="assets/elonerd/website/optimized/elonerd-faq-helper-transparent.webp"
-            alt=""
-            width={1024}
-            height={1024}
-          />
         </div>
       </section>
     </>

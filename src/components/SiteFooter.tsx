@@ -14,7 +14,6 @@ const explore = [
 const resources = [
   { to: "/#story", label: footer.story },
   { to: "/#how-to-buy", label: footer.howToBuy },
-  { to: "/token#faq", label: footer.faq },
   { to: "/community#reactions", label: footer.stickers },
   { to: "/community#maker", label: footer.maker },
 ]
@@ -81,12 +80,6 @@ export function SiteFooter() {
           width={600}
           height={900}
         />
-      </div>
-      <div className="container footer-notes">
-        <p>{footer.independence}</p>
-        <p>{footer.risk}</p>
-        <p>{footer.privacy}</p>
-        <p>{footer.copyright(project.copyrightYear)}</p>
       </div>
     </footer>
   )

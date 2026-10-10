@@ -8,9 +8,9 @@ const origin = "https://elonerd.site"
 const routes = [
   {
     file: "token/index.html",
-    title: "Token Details & FAQ — Elonerd",
+    title: "Token Details — Elonerd",
     description:
-      "Check Elonerd's intended network, launch information, contract status and practical answers before interacting with a token.",
+      "Check Elonerd's intended network, launch information and contract status before interacting with a token.",
     url: `${origin}/token`,
   },
   {

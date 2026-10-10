@@ -64,9 +64,7 @@ export function ReactionGallery() {
         <a className="btn btn-gold" href={assetUrl(stickerPackPath)} download="elonerd-12-stickers.zip">
           {galleryCopy.pack}
         </a>
-        <p>{galleryCopy.packHelper}</p>
       </div>
-      <p className="caption">{galleryCopy.caption}</p>
       <dialog
         ref={dialogRef}
         className="sticker-dialog"

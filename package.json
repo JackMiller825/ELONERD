@@ -7,7 +7,7 @@
     "dev": "vite",
     "typecheck": "tsc -b",
     "lint": "oxlint",
-    "test": "node --test tests/gates.test.ts tests/medalForm.test.ts tests/reactions.test.ts tests/faq.test.ts",
+    "test": "node --test tests/gates.test.ts tests/medalForm.test.ts tests/reactions.test.ts",
     "build": "tsc -b && vite build && node scripts/emit-route-pages.mjs",
     "preview": "vite preview"
   },
