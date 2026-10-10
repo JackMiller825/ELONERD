@@ -89,7 +89,7 @@ export const buy = {
     {
       heading: "Check the token",
       steps: [
-        "Open Tokenomics. The contract address is not published yet.",
+        "Open Tokenomics and confirm the published contract address.",
         "Use the verified swap link when it is published. Check that the swap interface is on Ethereum mainnet. Match the full contract address; a name or ticker alone is not enough.",
       ],
     },
