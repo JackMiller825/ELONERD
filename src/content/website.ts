@@ -89,7 +89,7 @@ export const buy = {
     {
       heading: "Check the token",
       steps: [
-        "Open Tokenomics. Confirm the published contract against the project's verified official channels.",
+        "Open Tokenomics. The contract address is not published yet.",
         "Use the verified swap link when it is published. Check that the swap interface is on Ethereum mainnet. Match the full contract address; a name or ticker alone is not enough.",
       ],
     },
@@ -125,10 +125,9 @@ export const invite = {
 export const tokenPage = {
   heading: "Tokenomics",
   contractLabel: "Contract address",
-  copyDisabled: "Contract not published",
+  pendingAddress: "Coming Soon..",
   copyEnabled: "Copy address",
-  copySuccess: "Address copied.",
-  copyFailure: "Could not copy. Select and copy the address manually.",
+  copySuccess: "Copied",
   facts: [
     { key: "totalSupply", label: "Supply" },
     { key: "buySellTax", label: "Buy / sell tax" },

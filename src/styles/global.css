@@ -71,49 +71,62 @@ li + li { margin-top: 8px; }
   font-size: 1rem;
   font-weight: 700;
 }
-.tokenomics { padding-block: 72px 88px; }
-.tokenomics h1 { color: var(--ivory); margin-bottom: 28px; }
+.tokenomics h1 { color: var(--ink); margin-bottom: 28px; }
+.token-contract,
+.token-stat {
+  background: var(--ivory);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  min-width: 0;
+}
 .token-contract {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
   padding: 22px 28px;
-  border-radius: 22px;
-  background: #32184a;
-  border: 1px solid rgb(255 249 237 / 14%);
+  margin-bottom: 16px;
 }
-.token-contract .fact-label { color: rgb(255 249 237 / 72%); }
-.token-contract .contract-address { color: var(--ivory); font-size: clamp(1rem, 2vw, 1.35rem); }
-.tokenomics .copy-address {
-  flex: 0 0 auto;
-  background: transparent;
-  color: var(--ivory);
-  border-color: rgb(255 249 237 / 45%);
-  box-shadow: none;
-  border-radius: 999px;
+.token-contract > div { min-width: 0; }
+.token-contract .fact-label,
+.token-stat h2 { color: var(--ink); }
+.token-contract .contract-address,
+.contract-pending {
+  color: var(--ink);
+  margin: 0;
+  max-width: 100%;
 }
-.tokenomics .status { color: var(--gold); }
+.contract-pending {
+  font-family: Fredoka, ui-rounded, system-ui, sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.tokenomics .copy-address { flex: 0 0 auto; background: var(--gold); color: var(--ink); border-color: var(--ink); }
 .token-stats {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
 }
 .token-stat {
+  container-type: inline-size;
   padding: 22px 24px;
-  border-radius: 22px;
-  background: #32184a;
-  border: 1px solid rgb(255 249 237 / 14%);
-  min-width: 0;
 }
 .token-stat h2 {
   margin: 0 0 12px;
-  color: rgb(255 249 237 / 72%);
   font-family: Nunito, system-ui, sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
-.token-stat .fact-value { color: var(--ivory); font-size: clamp(1.75rem, 3vw, 2.4rem); }
+.token-stat .fact-value {
+  color: var(--ink);
+  max-width: 100%;
+  font-size: clamp(1.05rem, 11cqi, 1.85rem);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
 .sr-only {
   position: absolute;
   width: 1px;

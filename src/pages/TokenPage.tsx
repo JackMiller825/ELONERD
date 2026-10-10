@@ -1,25 +1,26 @@
 import { useState } from "react"
 import { project } from "../config/project.ts"
 import { meta, tokenPage } from "../content/website.ts"
-import { canCopyContract, contractLabel, displayFact } from "../lib/gates.ts"
+import { canCopyContract, displayFact } from "../lib/gates.ts"
 import { usePageMeta } from "../lib/meta.ts"
 import { Button } from "../components/Button.tsx"
 import { Icon } from "../components/Icon.tsx"
 
 export function TokenPage() {
   usePageMeta(meta.token.title, meta.token.description, meta.token.path)
-  const [copyStatus, setCopyStatus] = useState("")
+  const [copied, setCopied] = useState(false)
   const addressReady = canCopyContract(project.contractAddress, project.contractVerified)
-  const shownAddress = contractLabel(project.contractAddress, project.contractVerified)
+  const shownAddress = addressReady ? project.contractAddress : tokenPage.pendingAddress
 
   async function copyContract() {
-    if (!addressReady) return
-    try {
-      await navigator.clipboard.writeText(project.contractAddress as string)
-      setCopyStatus(tokenPage.copySuccess)
-    } catch {
-      setCopyStatus(tokenPage.copyFailure)
+    if (addressReady) {
+      try {
+        await navigator.clipboard.writeText(project.contractAddress as string)
+      } catch {
+        return
+      }
     }
+    setCopied(true)
   }
 
   const facts = [
@@ -30,22 +31,19 @@ export function TokenPage() {
   ]
 
   return (
-    <section id="tokenomics" className="section section-plum tokenomics">
+    <section id="tokenomics" className="section tokenomics">
       <div className="container">
         <h1>{tokenPage.heading}</h1>
         <article className="token-contract">
           <div>
             <p className="fact-label">{tokenPage.contractLabel}</p>
-            <p className="contract-address">{shownAddress}</p>
+            <p className={addressReady ? "contract-address" : "contract-pending"}>{shownAddress}</p>
           </div>
-          <Button variant="outline" className="copy-address" onClick={copyContract} disabled={!addressReady}>
-            <Icon name="copy" />
-            {addressReady ? tokenPage.copyEnabled : tokenPage.copyDisabled}
+          <Button variant="gold" className="copy-address" onClick={copyContract} aria-live="polite">
+            {copied ? null : <Icon name="copy" />}
+            {copied ? tokenPage.copySuccess : tokenPage.copyEnabled}
           </Button>
         </article>
-        <p className="status" role="status" aria-live="polite">
-          {copyStatus}
-        </p>
         <div className="token-stats">
           {facts.map((fact) => (
             <article key={fact.label} className="token-stat">
