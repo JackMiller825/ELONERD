@@ -8,9 +8,8 @@ export const meta = {
     path: "/",
   },
   token: {
-    title: "Token Details — Elonerd",
-    description:
-      "Check Elonerd's intended network, launch information and contract status before interacting with a token.",
+    title: "Tokenomics — Elonerd",
+    description: "Elonerd contract address, supply, buy and sell tax, LP status, and ownership.",
     path: "/token",
   },
   community: {
@@ -32,7 +31,7 @@ export const shared = {
   joinClub: "Join the Club",
   externalSuffix: "opens an external website",
   home: "Home",
-  token: "Token",
+  token: "Tokenomics",
   community: "Community",
 }
 
@@ -78,7 +77,7 @@ export const buy = {
   eyebrow: "START WITH THE FACTS",
   heading: "New to Ethereum? Take it one step at a time.",
   intro:
-    "These are general steps for a future verified launch. A contract and official swap destination have not yet been supplied. Check the Token page before making a purchase.",
+    "These are general steps for buying on Ethereum. Confirm the contract on the Tokenomics page before making a purchase. An official swap destination has not yet been supplied.",
   cards: [
     {
       heading: "Get your wallet ready",
@@ -90,7 +89,7 @@ export const buy = {
     {
       heading: "Check the token",
       steps: [
-        "Open Token details here. Confirm the published contract against the project's verified official channels. If it is still marked pending, stop here.",
+        "Open Tokenomics. Confirm the published contract against the project's verified official channels.",
         "Use the verified swap link when it is published. Check that the swap interface is on Ethereum mainnet. Match the full contract address; a name or ticker alone is not enough.",
       ],
     },
@@ -102,7 +101,7 @@ export const buy = {
       ],
     },
   ],
-  primary: "Check Token Details",
+  primary: "Check Tokenomics",
   swapPending: "Swap link not published",
   smallPrint: "Memecoins can lose all value. Network fees apply. This guide does not promise returns.",
   help: [
@@ -124,35 +123,18 @@ export const invite = {
 }
 
 export const tokenPage = {
-  eyebrow: "CHECK BEFORE YOU CLICK",
-  heading: "Know your token.",
-  intro:
-    "The identity is settled. The launch details are not. We show missing information plainly so you can tell what has been confirmed.",
-  launchLabel: "Launch status",
+  heading: "Tokenomics",
   contractLabel: "Contract address",
-  contractHelper: "Not published. Do not buy using an address from an unsolicited message.",
   copyDisabled: "Contract not published",
-  copyEnabled: "Copy Contract",
-  copySuccess: "Contract copied.",
+  copyEnabled: "Copy address",
+  copySuccess: "Address copied.",
   copyFailure: "Could not copy. Select and copy the address manually.",
-  explorer: "View on Etherscan",
-  swapPending: "Swap link not published",
-  swapEnabled: "Open Verified Swap",
   facts: [
-    { key: "totalSupply", label: "Total supply" },
+    { key: "totalSupply", label: "Supply" },
     { key: "buySellTax", label: "Buy / sell tax" },
-    { key: "liquidityStatus", label: "Liquidity status" },
-    { key: "ownershipStatus", label: "Ownership / permissions" },
-    { key: "tokenomics", label: "Tokenomics" },
-    { key: "contract", label: "Official contract" },
+    { key: "liquidityStatus", label: "LP status" },
+    { key: "ownershipStatus", label: "Ownership" },
   ] as const,
-  chart: "View Chart",
-  chartPending: "Chart link pending",
-  identity: {
-    name: "Name",
-    ticker: "Ticker",
-    network: "Intended network",
-  },
 }
 
 export const hub = {
